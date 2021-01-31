@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login"
-    android:background="#D3D0CB">
+    android:background="#fff">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,24 +18,36 @@
             android:layout_height="200dp"
             android:src="@drawable/mylogo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="25dp"
             android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/textAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MathEdu"
+            android:textColor="#545E75"
+            android:layout_below="@id/icon_registrasi"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+
             />
 
         <TextView
             android:id="@+id/textMasuk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/icon_registrasi"
+            android:layout_below="@id/textAppName"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:text="Login with Facebook or Google"
             android:textColor="#545E75"
             />
 
         <LinearLayout
             android:id="@+id/google_registrasi"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textMasuk"
