@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProgrammingApp">
 <<<<<<< HEAD
+        <activity android:name=".Login">
+=======
+<<<<<<< HEAD
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Questioner">
 =======
@@ -20,16 +23,23 @@
         <activity android:name=".SplashScreen" />
         <activity android:name=".MainActivity">
 >>>>>>> f0f2cb9f94cb0fdf9939047c0c3b98f365c7f4d6
+>>>>>>> master
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".MainActivity">
+
+        </activity>
+=======
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+>>>>>>> master
     </application>
 
 </manifest>
