@@ -31,7 +31,7 @@
             android:layout_below="@id/icon_registrasi"
             android:layout_centerHorizontal="true"
             android:textSize="40sp"
-
+            android:fontFamily="@font/montserrat"
             />
 
         <TextView
