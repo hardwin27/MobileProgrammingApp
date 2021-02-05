@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">MathEd</string>
+    <string name="app_name">MathEdu</string>
     <string name="title_activity_login">Login</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -10,5 +10,18 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <!-- Strings for dashboard -->
+    <string name="Course1">Course 1</string>
+    <string name="Course2">Course 2</string>
+    <string name="Course3">Course 3</string>
+    <string name="Course4">Course 4</string>
+    <string name="Course5">Course 5</string>
+
+    <!--Title and Description -->
+    <string name="Recent">Recent Courses</string>
+    <string name="Courses">Your Courses</string>
+    <string name="Desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam</string>
+
 >>>>>>> master
 </resources>
