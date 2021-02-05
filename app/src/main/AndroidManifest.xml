@@ -9,9 +9,8 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProgrammingApp">
-
-        <activity android:name=".Login"/>
-
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Questioner" />
-        <activity android:name=".Dashboard"></activity>
-
-        <activity android:name=".SplashScreen">
-
-        </activity>
+        <activity android:name=".Dashboard" />
+        <activity android:name=".SplashScreen"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
