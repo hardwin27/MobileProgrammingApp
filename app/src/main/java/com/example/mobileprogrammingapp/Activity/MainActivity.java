@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView btmNavView;
     String username;
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         initialSetup();
 
         username = getIntent().getStringExtra("username");
+        email = getIntent().getStringExtra("email");
 
         new getMessage().execute();
 
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
                     return true;
                 case R.id.btmMenuProfile:
-                    Profile profile = new Profile();
+                    Profile profile = new Profile(username,email);
                     FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
                     transaction1.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
                     transaction1.replace(R.id.contentView, profile);
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
             try {
                 URL url = new URL("http://undispensed-rose.000webhostapp.com/x.php");
-                HttpURLConnection httpURLConnection=(HttpURLConnection) url.openConnection();
+                HttpURLConnection httpURLConnection =(HttpURLConnection) url.openConnection();
                 InputStream inputStream=httpURLConnection.getInputStream();
                 InputStreamReader reader=new InputStreamReader(inputStream);
                 message=getData(reader);

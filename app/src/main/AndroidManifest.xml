@@ -11,15 +11,10 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProgrammingApp">
-
-        <activity android:name=".Activity.Login"
-            />
-
-        <activity android:name=".Activity.MainActivity">
-
-        </activity>
+        <activity android:name=".Activity.Registration"></activity>
+        <activity android:name=".Activity.Login" />
+        <activity android:name=".Activity.MainActivity"></activity>
         <activity android:name=".Activity.Questioner" />
-
         <activity android:name=".Activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
