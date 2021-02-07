@@ -1,8 +1,10 @@
-package com.example.mobileprogrammingapp;
+package com.example.mobileprogrammingapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.mobileprogrammingapp.R;
 
 public class Questioner extends AppCompatActivity {
 
