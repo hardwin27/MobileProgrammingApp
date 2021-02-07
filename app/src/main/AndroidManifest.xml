@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MobileProgrammingApp">
+        android:theme="@style/Theme.MobileProgrammingApp"
+        android:usesCleartextTraffic="true">
         <activity android:name=".Activity.Registration"></activity>
         <activity android:name=".Activity.Login" />
         <activity android:name=".Activity.MainActivity"></activity>

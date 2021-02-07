@@ -61,7 +61,7 @@ public class Login extends AppCompatActivity {
                     pdialog.setMessage("Singin In...");
                     pdialog.show();
 
-                    String url = "http://undispensed-rose.000webhostapp.com/login.php";
+                    String url = "https://undispensed-rose.000webhostapp.com/login.php";
 
                     StringRequest stringRequest = new StringRequest(Request.Method.POST,
                             url, new Response.Listener<String>() {

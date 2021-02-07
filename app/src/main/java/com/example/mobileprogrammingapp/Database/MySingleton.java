@@ -14,13 +14,11 @@ public class MySingleton {
     private static Context mCtx;
 
     private MySingleton(Context context){
-
         mCtx = context;
         requestQueue = getRequestQueue();
     }
 
     public RequestQueue getRequestQueue(){
-
         if(requestQueue==null){
             requestQueue = Volley.newRequestQueue(mCtx.getApplicationContext());
         }

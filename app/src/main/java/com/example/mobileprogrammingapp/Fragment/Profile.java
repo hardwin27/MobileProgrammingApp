@@ -21,8 +21,6 @@ public class Profile extends Fragment {
         this.email = email;
     }
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -52,7 +52,7 @@ public class Registration extends AppCompatActivity {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
 
-                String url = "http://undispensed-rose.000webhostapp.com/registration.php";
+                String url = "https://undispensed-rose.000webhostapp.com/registration.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST,
                         url, new Response.Listener<String>() {
