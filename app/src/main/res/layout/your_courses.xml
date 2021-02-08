@@ -7,11 +7,7 @@
     app:cardElevation="8dp"
 
     >
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> master
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="150dp"
@@ -19,7 +15,7 @@
         android:background="#D3D0CB"
         >
 
-<<<<<<< HEAD
+
        <ImageView
            android:id="@+id/yc_image"
            android:layout_width="100dp"
@@ -27,7 +23,7 @@
            android:src="@drawable/download"
            android:scaleType="centerCrop"/>
         
-=======
+
         <ImageView
             android:id="@+id/yc_image"
             android:layout_width="100dp"
@@ -35,7 +31,7 @@
             android:src="@drawable/download"
             android:scaleType="centerCrop"/>
 
->>>>>>> master
+
         <TextView
             android:id="@+id/yc_title"
             android:layout_width="wrap_content"
@@ -66,13 +62,13 @@
             android:layout_below="@id/yc_rating"
             android:layout_toRightOf="@id/yc_image"
             android:padding="8dp"/>
-<<<<<<< HEAD
+
         
     </RelativeLayout>
     
-=======
 
-    </RelativeLayout>
 
->>>>>>> master
+
+
+
 </androidx.cardview.widget.CardView>

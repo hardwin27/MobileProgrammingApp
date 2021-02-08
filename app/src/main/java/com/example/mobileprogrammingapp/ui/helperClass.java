@@ -22,8 +22,6 @@ public class helperClass {
     public String getDesc() {
         return desc;
     }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> master
+
