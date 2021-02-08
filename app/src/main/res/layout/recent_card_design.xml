@@ -36,7 +36,11 @@
             android:fontFamily="@font/montserrat"
             android:textStyle="bold"
             />
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> master
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

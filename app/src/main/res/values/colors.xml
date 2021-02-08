@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     <!-- Dashboard Colors-->
     <!-- Body and Background Colors-->
     <color name="home_background">#f2f5f8</color>
@@ -20,4 +23,8 @@
     <color name="card2">#7adccf</color>
     <color name="card3">#f7c59f</color>
     <color name="card4">#b8d7f5</color>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 </resources>

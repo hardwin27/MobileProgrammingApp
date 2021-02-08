@@ -6,7 +6,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+<<<<<<< HEAD
 import com.example.mobileprogrammingapp.Dashboard;
+=======
+>>>>>>> master
 import com.example.mobileprogrammingapp.R;
 
 import java.util.ArrayList;
@@ -76,4 +79,8 @@ public class cardAdapter extends RecyclerView.Adapter<cardAdapter.recentViewHold
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
