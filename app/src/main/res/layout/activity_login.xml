@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".Activity.Login"
     android:background="#fff">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingBottom="40dp">
 
         <ImageView
@@ -18,7 +18,6 @@
             android:layout_height="200dp"
             android:src="@drawable/mylogo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
             android:scaleType="fitCenter"
             />
 
@@ -34,13 +33,64 @@
             android:fontFamily="@font/montserrat"
             />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@id/textAppName"
+            android:id="@+id/etEmail"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@id/etEmail"
+            android:id="@+id/etPassword"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPassword"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Login"/>
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLogin"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"
+            android:padding="10sp"
+            android:text="Register"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/holo_blue_dark"/>
+
         <TextView
             android:id="@+id/textMasuk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textAppName"
+            android:layout_below="@id/tvRegister"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:text="Login with Facebook or Google"
             android:textColor="#545E75"
             />
@@ -83,7 +133,7 @@
 
         <TextView
             android:id="@+id/textAtau"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/google_registrasi"
             android:layout_width="wrap_content"
@@ -94,7 +144,7 @@
 
         <LinearLayout
             android:id="@+id/facebook_registrasi"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textAtau"
@@ -109,7 +159,6 @@
             android:paddingBottom="10dp"
             android:background="#F75C03"
             >
-
 
 
             <ImageView

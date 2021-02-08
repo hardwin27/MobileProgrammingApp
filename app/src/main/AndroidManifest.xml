@@ -2,28 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobileprogrammingapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MobileProgrammingApp">
-
-        <activity android:name=".Login"/>
-
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.MobileProgrammingApp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.Registration"></activity>
+        <activity android:name=".Activity.Login" />
+        <activity android:name=".Activity.MainActivity"></activity>
+        <activity android:name=".Activity.Questioner" />
+        <activity android:name=".Activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Questioner" />
-        <activity android:name=".Dashboard"></activity>
-
-        <activity android:name=".SplashScreen">
-
         </activity>
 
         <meta-data
