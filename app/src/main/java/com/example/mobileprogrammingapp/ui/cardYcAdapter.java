@@ -1,6 +1,8 @@
 package com.example.mobileprogrammingapp.ui;
 
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,15 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.mobileprogrammingapp.Activity.courseDetail;
 import com.example.mobileprogrammingapp.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHolder> {
-    ArrayList<helperClass> ycCard;
+    static ArrayList<helperClass> ycCard;
 
     public cardYcAdapter(ArrayList<helperClass> ycCard) {
         this.ycCard = ycCard;
@@ -59,6 +63,19 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
 
         public ycViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            //setOnClickListener
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //start new intent
+
+                    Intent I = new Intent(v.getContext(), courseDetail.class);
+                    I.putExtra("title", (Serializable) ycCard.get(getAdapterPosition()));
+                    v.getContext().startActivity(I); //Start next activity
+
+                }
+            });
 
             //hooks
             image = itemView.findViewById(R.id.yc_image);
