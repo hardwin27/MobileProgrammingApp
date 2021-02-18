@@ -71,7 +71,7 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
                     //start new intent
 
                     Intent I = new Intent(v.getContext(), courseDetail.class);
-                    I.putExtra("title", (Serializable) ycCard.get(getAdapterPosition()));
+                    I.putExtra("title", String.valueOf(ycCard.get(getAdapterPosition())));
                     v.getContext().startActivity(I); //Start next activity
 
                 }

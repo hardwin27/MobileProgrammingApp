@@ -16,7 +16,6 @@ public class courseDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_detail);
-
         detailHead = findViewById(R.id.detail_head);
 
         Intent I = getIntent();
