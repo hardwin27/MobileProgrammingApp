@@ -11,14 +11,14 @@
         android:theme="@style/Theme.MobileProgrammingApp">
         <activity android:name=".Profile"></activity>
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Questioner">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Questioner" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Dashboard" />
         <activity android:name=".SplashScreen"></activity>
 
