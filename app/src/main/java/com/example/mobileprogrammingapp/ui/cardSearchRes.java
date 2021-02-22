@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mobileprogrammingapp.Activity.courseDetail;
+import com.example.mobileprogrammingapp.Activity.CourseDetail;
 import com.example.mobileprogrammingapp.R;
 
 import java.util.ArrayList;
@@ -66,7 +66,7 @@ public class cardSearchRes extends RecyclerView.Adapter<cardSearchRes.searchCard
                 public void onClick(View v) {
                     //start new intent
 
-                    Intent I = new Intent(v.getContext(), courseDetail.class);
+                    Intent I = new Intent(v.getContext(), CourseDetail.class);
                     I.putExtra("title", title.getText().toString());
                     v.getContext().startActivity(I); //Start next activity
 

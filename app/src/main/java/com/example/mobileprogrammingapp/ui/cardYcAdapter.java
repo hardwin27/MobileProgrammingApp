@@ -9,12 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-<<<<<<< HEAD
-
-import com.example.mobileprogrammingapp.Activity.courseDetail;
-=======
 import com.example.mobileprogrammingapp.Activity.CourseDetail;
->>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
 import com.example.mobileprogrammingapp.R;
 
 import java.io.Serializable;
@@ -72,17 +67,9 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
                 @Override
                 public void onClick(View v) {
                     //start new intent
-
-<<<<<<< HEAD
-                    Intent I = new Intent(v.getContext(), courseDetail.class);
-                    I.putExtra("title", title.getText().toString());
-                    v.getContext().startActivity(I); //Start next activity
-
-=======
                     Intent I = new Intent(v.getContext(), CourseDetail.class);
                     I.putExtra("title", title.getText().toString());
                     v.getContext().startActivity(I); //Start next activity
->>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
                 }
             });
 
@@ -94,7 +81,6 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
 
         }
     }
-
 
 }
 

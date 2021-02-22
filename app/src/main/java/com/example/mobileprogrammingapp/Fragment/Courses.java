@@ -14,11 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-<<<<<<< HEAD
 import com.example.mobileprogrammingapp.Activity.Login;
 import com.example.mobileprogrammingapp.Activity.MainActivity;
-=======
->>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
+
 import com.example.mobileprogrammingapp.R;
 import com.example.mobileprogrammingapp.search_activity;
 import com.example.mobileprogrammingapp.ui.cardAdapter;
@@ -52,16 +50,10 @@ public class Courses extends Fragment {
         btnSearch = view.findViewById(R.id.btnSearch);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
-<<<<<<< HEAD
             public void onClick(View v) {
 
                 Intent intent3 = new Intent(getActivity(), search_activity.class);
-
                 startActivity(intent3);
-=======
-            public void onClick(View view) {
-
->>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
             }
         });
 
