@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Quiz">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        tools:context="Activity.Questioner" >
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/optionA"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Lorem Ipsum"
+            android:textSize="24dp"
+            android:fontFamily="@font/montserrat"/>
+
+        <Button
+            android:id="@+id/optionA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/optionB"
+            android:layout_centerHorizontal="true"
+            android:text="A"
+            android:textColor="@color/black"
+            app:backgroundTint="#d3d0cb" />
+
+        <Button
+            android:id="@+id/optionB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/optionC"
+            android:layout_centerHorizontal="true"
+            android:text="B"
+            android:textColor="@color/black"
+            app:backgroundTint="#d3d0cb" />
+
+        <Button
+            android:id="@+id/optionC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/optionD"
+            android:layout_centerHorizontal="true"
+            android:text="C"
+            android:textColor="@color/black"
+            app:backgroundTint="#d3d0cb" />
+
+        <Button
+            android:id="@+id/optionD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="D"
+            android:textColor="@color/black"
+            app:backgroundTint="#d3d0cb" />
+
+    </RelativeLayout>
+
+</FrameLayout>

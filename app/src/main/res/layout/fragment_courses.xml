@@ -24,7 +24,6 @@
                 android:layout_height="50dp"
                 android:src="@drawable/ic_baseline_search_24"
                 android:background="@drawable/round_corner"
-                android:layout_centerVertical="true"
 
                 >
 

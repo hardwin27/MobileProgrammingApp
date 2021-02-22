@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.mobileprogrammingapp.R;
 
-public class courseDetail extends AppCompatActivity {
+public class CourseDetail extends AppCompatActivity {
 
     TextView detailHead;
 
@@ -16,6 +16,7 @@ public class courseDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_detail);
+
         detailHead = findViewById(R.id.detail_head);
 
         Intent I = getIntent();

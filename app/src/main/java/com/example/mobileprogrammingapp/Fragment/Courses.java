@@ -16,6 +16,7 @@ import android.widget.ImageView;
 
 import com.example.mobileprogrammingapp.Activity.Login;
 import com.example.mobileprogrammingapp.Activity.MainActivity;
+
 import com.example.mobileprogrammingapp.R;
 import com.example.mobileprogrammingapp.search_activity;
 import com.example.mobileprogrammingapp.ui.cardAdapter;
@@ -52,7 +53,6 @@ public class Courses extends Fragment {
             public void onClick(View v) {
 
                 Intent intent3 = new Intent(getActivity(), search_activity.class);
-
                 startActivity(intent3);
             }
         });
