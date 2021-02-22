@@ -62,7 +62,8 @@
                     app:autoPlay="true"
                     app:showFullScreenButton="true"
                     app:showYouTubeButton="false"
-                    app:videoId="qzcGfN9S_QY" />
+                    
+                    app:videoId="AA6RfgP-AHU" />
 
                 <TextView
                     android:id="@+id/detail_head"
