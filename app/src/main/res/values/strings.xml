@@ -22,7 +22,17 @@
     <string name="Recent">Recent Courses</string>
     <string name="Courses">Your Courses</string>
     <string name="Desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="courses_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus nulla lorem, molestie id tellus non, tempor ultrices augue. In ex urna, porttitor ac feugiat ac, dapibus vitae orci.
+        Integer in dui fermentum, eleifend mauris eget, semper justo. Curabitur interdum nisl a convallis elementum.
+        Nullam aliquam velit eget nisl euismod sollicitudin. Curabitur eu lacinia tellus, sed mattis dolor.
+        Quisque nec enim eu quam fermentum hendrerit eu at dolor.
+        In dictum mollis varius. Donec pretium tortor at fermentum luctus.
+        Morbi sed mauris condimentum, sodales neque nec, fermentum odio. Etiam quis maximus nisi.
+        In tempus gravida justo eget porta. Ut sit amet consectetur risus. Nunc ullamcorper in nisl vel imperdiet.
+        Curabitur tincidunt, enim at porttitor eleifend, mi eros luctus nunc, quis blandit odio orci vel magna.
+
+    </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

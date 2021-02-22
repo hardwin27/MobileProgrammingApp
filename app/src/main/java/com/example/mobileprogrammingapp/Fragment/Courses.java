@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
 import com.example.mobileprogrammingapp.R;
 import com.example.mobileprogrammingapp.ui.cardAdapter;
 import com.example.mobileprogrammingapp.ui.cardYcAdapter;
@@ -24,6 +26,7 @@ public class Courses extends Fragment {
     RecyclerView ycRecycler;
     RecyclerView.Adapter adapter;
     RecyclerView.Adapter adapter2;
+    ImageView btnSearch;
 
 
     public Courses() {
@@ -39,6 +42,13 @@ public class Courses extends Fragment {
         //hooks
         recentRecycler = view.findViewById(R.id.recent_recycler);
         ycRecycler = view.findViewById(R.id.yc_recycler);
+        btnSearch = view.findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         recentRecycler();
         ycRecycler();

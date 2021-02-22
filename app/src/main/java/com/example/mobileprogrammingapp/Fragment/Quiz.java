@@ -1,17 +1,22 @@
-package com.example.mobileprogrammingapp.Activity;
+package com.example.mobileprogrammingapp.Fragment;
+
+import android.content.Context;
+import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mobileprogrammingapp.Activity.Questioner;
 import com.example.mobileprogrammingapp.Object.QuestionManager;
 import com.example.mobileprogrammingapp.R;
 
-public class Questioner extends AppCompatActivity {
+public class Quiz extends Fragment {
 
     Button[] optionButtons = new Button[4];
     TextView questionText;
@@ -22,17 +27,23 @@ public class Questioner extends AppCompatActivity {
     private int questionAmount = questionManager.questionList.length;
     private int questionIndex = 0;
 
+    public Quiz() {
+
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questioner);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
-        optionButtons[0] = (Button) findViewById(R.id.optionA);
-        optionButtons[1] = (Button) findViewById(R.id.optionB);
-        optionButtons[2] = (Button) findViewById(R.id.optionC);
-        optionButtons[3] = (Button) findViewById(R.id.optionD);
 
-        questionText = (TextView) findViewById(R.id.questionText);
+        optionButtons[0] = view.findViewById(R.id.optionA);
+        optionButtons[1] = view.findViewById(R.id.optionB);
+        optionButtons[2] = view.findViewById(R.id.optionC);
+        optionButtons[3] = view.findViewById(R.id.optionD);
+
+        questionText = view.findViewById(R.id.questionText);
 
         for (Button optionButton : optionButtons) {
             optionButton.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +51,7 @@ public class Questioner extends AppCompatActivity {
                 public void onClick(View v) {
                     if(optionButton.getText() == answer) {
                         if(questionIndex >= questionAmount - 1) {
-                            endQuestioner();
+                            endQuestioner(getContext());
                         }
                         else {
                             questionIndex++;
@@ -48,13 +59,15 @@ public class Questioner extends AppCompatActivity {
                         }
                     }
                     else {
-                        endQuestioner();
+                        endQuestioner(getContext());
                     }
                 }
             });
         }
 
         updateQuestion(questionIndex);
+
+        return view;
     }
 
     private void updateQuestion(int index) {
@@ -68,8 +81,8 @@ public class Questioner extends AppCompatActivity {
 
     }
 
-    private void endQuestioner() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Questioner.this);
+    private void endQuestioner(Context context) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder
                 .setMessage("Quiz End");
         AlertDialog alertDialog = alertDialogBuilder.create();
