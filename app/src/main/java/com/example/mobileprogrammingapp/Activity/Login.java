@@ -58,7 +58,11 @@ public class Login extends AppCompatActivity {
 
                     ProgressDialog pdialog = new ProgressDialog(Login.this);
                     pdialog.setCancelable(false);
+<<<<<<< HEAD
                     pdialog.setMessage("Signing In...");
+=======
+                    pdialog.setMessage("Signin In...");
+>>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
                     pdialog.show();
 
                     String url = "https://undispensed-rose.000webhostapp.com/login.php";

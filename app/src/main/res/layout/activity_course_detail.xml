@@ -62,7 +62,10 @@
                     app:autoPlay="true"
                     app:showFullScreenButton="true"
                     app:showYouTubeButton="false"
+<<<<<<< HEAD
                     
+=======
+>>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
                     app:videoId="AA6RfgP-AHU" />
 
                 <TextView

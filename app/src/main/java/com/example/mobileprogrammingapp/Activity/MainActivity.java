@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.example.mobileprogrammingapp.Fragment.Courses;
 import com.example.mobileprogrammingapp.Fragment.Profile;
+import com.example.mobileprogrammingapp.Fragment.Quiz;
 import com.example.mobileprogrammingapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -68,7 +69,11 @@ public class MainActivity extends AppCompatActivity {
                     transaction.commit();
                     return true;
                 case R.id.btmMenuQuiz:
-
+                    Quiz quiz = new Quiz();
+                    FragmentTransaction transaction0 = getSupportFragmentManager().beginTransaction();
+                    transaction0.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+                    transaction0.replace(R.id.contentView, quiz);
+                    transaction0.commit();
                     return true;
                 case R.id.btmMenuProfile:
                     Profile profile = new Profile(username,email);

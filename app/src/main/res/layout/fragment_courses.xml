@@ -20,10 +20,16 @@
 
             <ImageView
                 android:id="@+id/btnSearch"
+<<<<<<< HEAD
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_baseline_search_24"
                 android:background="@drawable/round_corner"
+=======
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/menu"
+>>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
                 android:layout_centerVertical="true"
 
                 >

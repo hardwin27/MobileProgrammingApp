@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProgrammingApp"
         android:usesCleartextTraffic="true">
+<<<<<<< HEAD
 
         <activity android:name=".search_activity"></activity>
         <activity android:name=".Activity.courseDetail" android:configChanges="orientation|screenSize"/>
+=======
+        <activity android:name=".Activity.CourseDetail"
+            android:configChanges="orientation|screenSize"/>
+>>>>>>> bcdb5ca211688604309a341d6ec3f1fdccf28b2c
         <activity android:name=".Activity.Registration" />
         <activity android:name=".Activity.Login" />
         <activity android:name=".Activity.MainActivity" />
