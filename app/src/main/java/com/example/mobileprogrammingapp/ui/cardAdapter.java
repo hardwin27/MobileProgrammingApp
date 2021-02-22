@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.example.mobileprogrammingapp.R;
 
 import java.util.ArrayList;
@@ -75,4 +76,8 @@ public class cardAdapter extends RecyclerView.Adapter<cardAdapter.recentViewHold
 
 
 
+
 }
+
+
+

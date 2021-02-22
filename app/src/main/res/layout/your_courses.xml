@@ -15,12 +15,22 @@
         android:background="#D3D0CB"
         >
 
+
+       <ImageView
+           android:id="@+id/yc_image"
+           android:layout_width="100dp"
+           android:layout_height="150dp"
+           android:src="@drawable/download"
+           android:scaleType="centerCrop"/>
+        
+
         <ImageView
             android:id="@+id/yc_image"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:src="@drawable/download"
             android:scaleType="centerCrop"/>
+
 
         <TextView
             android:id="@+id/yc_title"
@@ -53,6 +63,12 @@
             android:layout_toRightOf="@id/yc_image"
             android:padding="8dp"/>
 
+        
     </RelativeLayout>
+    
+
+
+
+
 
 </androidx.cardview.widget.CardView>

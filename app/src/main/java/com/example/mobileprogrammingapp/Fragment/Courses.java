@@ -1,5 +1,6 @@
 package com.example.mobileprogrammingapp.Fragment;
 
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
@@ -11,7 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.example.mobileprogrammingapp.Activity.Login;
+import com.example.mobileprogrammingapp.Activity.MainActivity;
 import com.example.mobileprogrammingapp.R;
+import com.example.mobileprogrammingapp.search_activity;
 import com.example.mobileprogrammingapp.ui.cardAdapter;
 import com.example.mobileprogrammingapp.ui.cardYcAdapter;
 import com.example.mobileprogrammingapp.ui.helperClass;
@@ -24,6 +30,7 @@ public class Courses extends Fragment {
     RecyclerView ycRecycler;
     RecyclerView.Adapter adapter;
     RecyclerView.Adapter adapter2;
+    ImageView btnSearch;
 
 
     public Courses() {
@@ -39,6 +46,16 @@ public class Courses extends Fragment {
         //hooks
         recentRecycler = view.findViewById(R.id.recent_recycler);
         ycRecycler = view.findViewById(R.id.yc_recycler);
+        btnSearch = view.findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent3 = new Intent(getActivity(), search_activity.class);
+
+                startActivity(intent3);
+            }
+        });
 
         recentRecycler();
         ycRecycler();
