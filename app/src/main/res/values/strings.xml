@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">MathEd</string>
+    <string name="app_name">MathEdu</string>
     <string name="title_activity_login">Login</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -10,5 +10,35 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+<<<<<<< HEAD
     >>>>>>> master
+=======
+    <string name="search">Search Courses</string>
+
+    <!-- Strings for dashboard -->
+    <string name="Course1">Course 1</string>
+    <string name="Course2">Course 2</string>
+    <string name="Course3">Course 3</string>
+    <string name="Course4">Course 4</string>
+    <string name="Course5">Course 5</string>
+
+    <!--Title and Description -->
+    <string name="Recent">Recent Courses</string>
+    <string name="Courses">Your Courses</string>
+    <string name="Desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam</string>
+    <string name="courses_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus nulla lorem, molestie id tellus non, tempor ultrices augue. In ex urna, porttitor ac feugiat ac, dapibus vitae orci.
+        Integer in dui fermentum, eleifend mauris eget, semper justo. Curabitur interdum nisl a convallis elementum.
+        Nullam aliquam velit eget nisl euismod sollicitudin. Curabitur eu lacinia tellus, sed mattis dolor.
+        Quisque nec enim eu quam fermentum hendrerit eu at dolor.
+        In dictum mollis varius. Donec pretium tortor at fermentum luctus.
+        Morbi sed mauris condimentum, sodales neque nec, fermentum odio. Etiam quis maximus nisi.
+        In tempus gravida justo eget porta. Ut sit amet consectetur risus. Nunc ullamcorper in nisl vel imperdiet.
+        Curabitur tincidunt, enim at porttitor eleifend, mi eros luctus nunc, quis blandit odio orci vel magna.
+
+    </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+>>>>>>> master
 </resources>
