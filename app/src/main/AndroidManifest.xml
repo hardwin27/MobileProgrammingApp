@@ -10,12 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
-        android:theme="@style/Theme.MobileProgrammingApp">
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Questioner">
-=======
+
         android:theme="@style/Theme.MobileProgrammingApp"
         android:usesCleartextTraffic="true">
 
@@ -27,19 +22,13 @@
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.Questioner" />
         <activity android:name=".Activity.SplashScreen">
->>>>>>> master
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Dashboard" />
-        <activity android:name=".SplashScreen"></activity>
-=======
->>>>>>> master
+
 
         <meta-data
             android:name="preloaded_fonts"

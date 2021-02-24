@@ -6,11 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:padding="16dp"
-<<<<<<< HEAD
-    tools:context=".Questioner" >
-=======
     tools:context="Activity.Questioner" >
->>>>>>> master
 
     <TextView
         android:id="@+id/questionText"
