@@ -82,8 +82,18 @@
                     android:layout_margin="10dp"
                     android:text="@string/courses_detail"
                     android:textColor="@color/black"
-
                     />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btnTakeQuiz"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Take Quiz"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:background="@drawable/round_corner"/>
 
             </LinearLayout>
         </ScrollView>
