@@ -8,16 +8,62 @@
     android:padding="16dp"
     tools:context="Activity.Questioner" >
 
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/quiztime"
+
+
+            >
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/logo_round"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginRight="7dp"
+
+            >
+
+        </ImageView>
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/questionText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
         android:layout_above="@id/optionA"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="Lorem Ipsum"
         android:textSize="24dp"
-        android:fontFamily="@font/montserrat"/>
+        android:background="@drawable/search_outline"
+        android:fontFamily="@font/montserrat"
+        android:padding="10dp"/>
 
     <Button
         android:id="@+id/optionA"
@@ -27,7 +73,7 @@
         android:layout_centerHorizontal="true"
         android:text="A"
         android:textColor="@color/black"
-        app:backgroundTint="#d3d0cb" />
+        app:backgroundTint="#F75C03" />
 
     <Button
         android:id="@+id/optionB"
@@ -37,7 +83,7 @@
         android:layout_centerHorizontal="true"
         android:text="B"
         android:textColor="@color/black"
-        app:backgroundTint="#d3d0cb" />
+        app:backgroundTint="#F75C03" />
 
     <Button
         android:id="@+id/optionC"
@@ -47,7 +93,7 @@
         android:layout_centerHorizontal="true"
         android:text="C"
         android:textColor="@color/black"
-        app:backgroundTint="#d3d0cb" />
+        app:backgroundTint="#F75C03" />
 
     <Button
         android:id="@+id/optionD"
@@ -56,6 +102,6 @@
         android:layout_alignParentBottom="true"
         android:text="D"
         android:textColor="@color/black"
-        app:backgroundTint="#d3d0cb" />
+        app:backgroundTint="#F75C03" />
 
 </RelativeLayout>

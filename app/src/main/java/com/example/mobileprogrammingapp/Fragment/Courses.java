@@ -1,6 +1,8 @@
 package com.example.mobileprogrammingapp.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import com.example.mobileprogrammingapp.Activity.Login;
 import com.example.mobileprogrammingapp.Activity.MainActivity;
 
+import com.example.mobileprogrammingapp.Object.CourseObj;
 import com.example.mobileprogrammingapp.R;
 import com.example.mobileprogrammingapp.search_activity;
 import com.example.mobileprogrammingapp.ui.cardAdapter;
@@ -32,7 +35,7 @@ public class Courses extends Fragment {
     RecyclerView.Adapter adapter;
     RecyclerView.Adapter adapter2;
     ImageView btnSearch;
-
+    ArrayList<CourseObj> courseList;
 
     public Courses() {
         // Required empty public constructor
@@ -45,6 +48,7 @@ public class Courses extends Fragment {
         View view = inflater.inflate(R.layout.fragment_courses, container, false);
 
         //hooks
+        courseList = CourseObj.getAll();
         recentRecycler = view.findViewById(R.id.recent_recycler);
         ycRecycler = view.findViewById(R.id.yc_recycler);
         btnSearch = view.findViewById(R.id.btnSearch);
@@ -70,9 +74,13 @@ public class Courses extends Fragment {
 
         ArrayList<helperClass> recentCard = new ArrayList<>();
 
-        recentCard.add(new helperClass(R.drawable.download, "Course 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
-        recentCard.add(new helperClass(R.drawable.download, "Course 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
-        recentCard.add(new helperClass(R.drawable.download, "Course 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
+        SharedPreferences sf = getContext().getSharedPreferences("SETTING", Context.MODE_PRIVATE);
+        int level = sf.getInt("level",0);
+
+        for (int i = level-1; i < courseList.size(); i++) {
+            CourseObj course = courseList.get(i);
+            recentCard.add(new helperClass(R.drawable.download, course.title, course.desc, course.url));
+        }
 
         //pass the arrayList to adapter
         adapter = new cardAdapter(recentCard);
@@ -88,11 +96,10 @@ public class Courses extends Fragment {
 
         ArrayList<helperClass> ycCard = new ArrayList<>();
 
-        ycCard.add(new helperClass(R.drawable.download, "Course 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
-        ycCard.add(new helperClass(R.drawable.download, "Course 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
-        ycCard.add(new helperClass(R.drawable.download, "Course 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
-        ycCard.add(new helperClass(R.drawable.download, "Course 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
-        ycCard.add(new helperClass(R.drawable.download, "Course 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum diam diam"));
+        ArrayList<CourseObj> courseList = CourseObj.getAll();
+        for (CourseObj course : courseList) {
+            ycCard.add(new helperClass(R.drawable.download, course.title, course.desc, course.url));
+        }
 
         //pass the arrayList to adapter
         adapter2 = new cardYcAdapter(ycCard);

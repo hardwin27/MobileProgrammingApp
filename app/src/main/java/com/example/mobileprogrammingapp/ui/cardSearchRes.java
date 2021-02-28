@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobileprogrammingapp.Activity.CourseDetail;
+import com.example.mobileprogrammingapp.Object.CourseObj;
 import com.example.mobileprogrammingapp.R;
 
 import java.util.ArrayList;
@@ -77,8 +78,13 @@ public class cardSearchRes extends RecyclerView.Adapter<cardSearchRes.searchCard
             image = itemView.findViewById(R.id.yc_image);
             title = itemView.findViewById(R.id.yc_title);
             desc = itemView.findViewById(R.id.yc_desc);
-
-
         }
+    }
+
+    public void filter(ArrayList<helperClass> filterList) {
+        cardSearch = new ArrayList<>();
+        cardSearch.addAll(filterList);
+
+        notifyDataSetChanged();
     }
 }

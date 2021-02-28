@@ -44,7 +44,7 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
         holder.image.setImageResource(helperClass.getImage());
         holder.title.setText(helperClass.getTitle());
         holder.desc.setText(helperClass.getDesc());
-
+        holder.url.setText(helperClass.url);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
     public static class ycViewHolder extends RecyclerView.ViewHolder{
 
         ImageView image;
-        TextView title, desc;
+        TextView title, desc, url;
 
         public ycViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +69,7 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
                     //start new intent
                     Intent I = new Intent(v.getContext(), CourseDetail.class);
                     I.putExtra("title", title.getText().toString());
+                    I.putExtra("url", url.getText().toString());
                     v.getContext().startActivity(I); //Start next activity
                 }
             });
@@ -77,7 +78,7 @@ public class cardYcAdapter extends RecyclerView.Adapter<cardYcAdapter.ycViewHold
             image = itemView.findViewById(R.id.yc_image);
             title = itemView.findViewById(R.id.yc_title);
             desc = itemView.findViewById(R.id.yc_desc);
-
+            url = itemView.findViewById(R.id.yc_url);
 
         }
     }

@@ -19,55 +19,48 @@
         android:fontFamily="@font/montserrat"
         />
 
-    <EditText
+
+    <ImageButton
+        android:id="@+id/searchBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/heading"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner"
+        android:src="@drawable/ic_baseline_search_24"
+        android:layout_alignParentEnd="true"/>
+
+    <SearchView
         android:id="@+id/search_field"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Search Here"
+        android:hint="Search Here"
         android:fontFamily="@font/montserrat"
         android:layout_below="@+id/heading"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:textSize="20dp"
         android:background="@drawable/search_outline"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
+        android:layout_toStartOf="@id/searchBtn"
         />
 
-    <ImageButton
-        android:id="@+id/searchBtn"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/heading"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/search_field"
-        android:background="@drawable/round_corner"
-        android:src="@drawable/ic_baseline_search_24" />
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_res"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:padding="20dp"
+        android:layout_below="@id/search_field"
+        android:layout_margin="20dp"
         >
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/search_res"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_below="@id/search_field"
-            android:layout_marginTop="180dp">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 

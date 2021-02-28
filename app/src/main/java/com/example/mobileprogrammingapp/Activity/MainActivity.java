@@ -5,7 +5,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
         initialSetup();
 
-        username = getIntent().getStringExtra("username");
-        email = getIntent().getStringExtra("email");
+        SharedPreferences sf = this.getSharedPreferences("SETTING", Context.MODE_PRIVATE);
+
+        username = sf.getString("username","");
+        email = sf.getString("email","");
 
         new getMessage().execute();
 

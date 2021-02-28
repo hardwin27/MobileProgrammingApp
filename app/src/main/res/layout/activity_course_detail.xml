@@ -19,7 +19,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/menu">
+                android:src="@drawable/menu"
+                android:visibility="gone">
 
             </ImageView>
 
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/montserrat"
-                android:text="@string/Course1"
+                android:text="Course"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -59,10 +60,10 @@
                 <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:autoPlay="true"
+                    app:autoPlay="false"
                     app:showFullScreenButton="true"
                     app:showYouTubeButton="false"
-                    app:videoId="AA6RfgP-AHU" />
+                    android:id="@+id/youtube_player_view"/>
 
                 <TextView
                     android:id="@+id/detail_head"
@@ -82,8 +83,19 @@
                     android:layout_margin="10dp"
                     android:text="@string/courses_detail"
                     android:textColor="@color/black"
-
                     />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btnTakeQuiz"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Take Quiz"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:background="@drawable/round_corner"
+                    android:visibility="gone"/>
 
             </LinearLayout>
         </ScrollView>

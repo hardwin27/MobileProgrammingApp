@@ -87,7 +87,6 @@ public class Login extends AppCompatActivity {
 
                                 Intent intent = new Intent(Login.this, Questioner.class);
                                 startActivity(intent);
-                                finish();
                             }
                         }
                     }, new Response.ErrorListener() {

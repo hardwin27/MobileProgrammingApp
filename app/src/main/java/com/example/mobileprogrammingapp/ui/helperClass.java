@@ -3,12 +3,13 @@ package com.example.mobileprogrammingapp.ui;
 public class helperClass {
 
     int image;
-    String title, desc;
+    String title, desc, url;
 
-    public helperClass(int image, String title, String desc) {
+    public helperClass(int image, String title, String desc, String url) {
         this.image = image;
         this.title = title;
         this.desc = desc;
+        this.url = url;
     }
 
     public int getImage() {
@@ -21,6 +22,10 @@ public class helperClass {
 
     public String getDesc() {
         return desc;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
 }

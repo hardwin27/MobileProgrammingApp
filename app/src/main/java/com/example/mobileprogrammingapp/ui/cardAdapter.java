@@ -1,5 +1,6 @@
 package com.example.mobileprogrammingapp.ui;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.mobileprogrammingapp.Activity.CourseDetail;
 import com.example.mobileprogrammingapp.R;
 
 import java.util.ArrayList;
@@ -47,6 +49,7 @@ public class cardAdapter extends RecyclerView.Adapter<cardAdapter.recentViewHold
         holder.image.setImageResource(helperClass.getImage());
         holder.title.setText(helperClass.getTitle());
         holder.desc.setText(helperClass.getDesc());
+        holder.url.setText(helperClass.url);
 
     }
 
@@ -60,7 +63,7 @@ public class cardAdapter extends RecyclerView.Adapter<cardAdapter.recentViewHold
     public static class recentViewHolder extends RecyclerView.ViewHolder{
 
         ImageView image;
-        TextView title, desc;
+        TextView title, desc, url;
 
         public recentViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,8 +72,18 @@ public class cardAdapter extends RecyclerView.Adapter<cardAdapter.recentViewHold
             image = itemView.findViewById(R.id.recent_card_image);
             title = itemView.findViewById(R.id.recent_card_title);
             desc = itemView.findViewById(R.id.recent_desc_card);
+            url = itemView.findViewById(R.id.recent_card_url);
 
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //start new intent
+                    Intent I = new Intent(v.getContext(), CourseDetail.class);
+                    I.putExtra("title", title.getText().toString());
+                    I.putExtra("url", url.getText().toString());
+                    v.getContext().startActivity(I); //Start next activity
+                }
+            });
         }
     }
 
