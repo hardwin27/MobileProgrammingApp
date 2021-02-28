@@ -3,9 +3,13 @@ package com.example.mobileprogrammingapp.Activity;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mobileprogrammingapp.Object.QuestionManager;
@@ -15,6 +19,7 @@ public class Questioner extends AppCompatActivity {
 
     Button[] optionButtons = new Button[4];
     TextView questionText;
+    Dialog dialog;
 
     private QuestionManager questionManager = new QuestionManager();
     private String[] optionList;
@@ -24,6 +29,8 @@ public class Questioner extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        dialog = new Dialog(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questioner);
 
@@ -74,5 +81,55 @@ public class Questioner extends AppCompatActivity {
                 .setMessage("Quiz End");
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+
+
+    
+    private void openTrueDialog(){
+        dialog.setContentView(R.layout.true_layout);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView imageViewClose = dialog.findViewById(R.id.imageViewClose);
+        Button btnOk = dialog.findViewById(R.id.btn_ok);
+
+        imageViewClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void openWrongDialog(){
+        dialog.setContentView(R.layout.wrong_layout);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView imageViewClose = dialog.findViewById(R.id.imageViewClose);
+        Button btnOk = dialog.findViewById(R.id.btn_ok);
+
+        imageViewClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 }
